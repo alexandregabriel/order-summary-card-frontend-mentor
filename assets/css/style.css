@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
 :root {
     /*Primary colors*/
-    --primary-color-pale-blue: hsl(225, 100%, 94%);
+    --primary-color-pale-blue: rgb(224, 232, 255);
     --primary-color-bright-blue: hsl(245, 75%, 52%); 
 
     /*Neutral colors*/
@@ -21,14 +23,154 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 100%;
+    font-family: 'Red Hat Display', sans-serif;
     background-image: url('../../images/pattern-background-desktop.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-color: var(--primary-color-pale-blue);
 }
 
+h1, h2 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--dark-blue);
+}
+
+h2 {
+    font-size: 0.9rem
+}
+
+.text_content p{
+    font-size: 0.9rem;
+    color: var(--desaturate-blue);
+    line-height: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--dark-blue);
+}
+
 
 
 .container{
-    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    border-radius: 4%;
+    overflow: auto;
 }
+
+.hero_img,
+.price_icon > img {
+    display: block; /* Images are by default displayed inline - which causes the padding below the image. (because of line-height) */
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.content{
+    display: flex;
+    padding: 7.5% 10%;
+    text-align: center;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-around;
+    gap: 1.2rem;
+}
+
+.text_content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.price_container,
+.price_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--very-pale-blue);
+    
+}
+
+.price_container{
+    padding: 7%;
+}
+
+.price_change > a {
+    text-decoration: underline;
+}
+
+.price_box > p {
+    font-size: 0.9rem;
+    color: var(--desaturate-blue);
+}
+
+.price_icon > img{
+    max-width: 75%;
+}
+
+button{
+    color: white;
+    background-color: var(--primary-color-bright-blue);
+    font-weight: 900;
+    font-size: 0.8rem;
+    border-radius: 0.6rem;
+    border: none;
+    -webkit-box-shadow: 0px 20px 7px 0px var(--primary-color-pale-blue); 
+    box-shadow: 0px 20px 7px 0px var(--primary-color-pale-blue);
+    padding: 4.5%;
+    cursor: pointer;
+}
+
+.cancel_order{
+    color: var(--desaturate-blue);
+}
+/*
+@media screen and (min-width: 1000px) and (max-width: 1439px) { 
+    
+    h1, h2 {
+        font-size: 1.5rem;
+        
+    }
+    
+    h2 {
+        font-size: 0.9rem
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        max-width: 25rem;
+        border-radius: 4%;
+        overflow: auto;
+    }
+
+    .text_content p{
+        font-size: 0.9rem;
+        color: var(--desaturate-blue);
+    }
+
+    .price_box > p {
+        font-size: 0.9rem;
+    }
+
+    button{
+        font-size: 0.8rem;
+        border-radius: 0.6rem;
+    }
+
+    .content{
+        display: flex;
+        padding: 7% 10%;
+        text-align: center;
+        flex-direction: column;
+        background-color: white;
+        justify-content: space-around;
+        gap: 1.5rem;
+    }
+}
+*/
