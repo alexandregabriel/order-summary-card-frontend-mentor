@@ -145,7 +145,7 @@ button:hover{
 
 /*Responsive mobile*/
 
-@media  screen and (max-width: 600px){
+@media  screen and (max-width: 576px){
     
     body {
         background-image: url('../../images/pattern-background-mobile.svg');
