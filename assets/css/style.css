@@ -41,17 +41,12 @@ h2 {
     font-size: 0.9rem
 }
 
-.text_content p{
-    font-size: 0.9rem;
-    color: var(--desaturate-blue);
-    line-height: 1.5rem;
-}
 
 a {
     text-decoration: none;
     font-weight: 700;
     font-size: 0.8rem;
-    color: var(--dark-blue);
+    color: var(--primary-color-bright-blue);
 }
 
 
@@ -59,7 +54,7 @@ a {
 .container{
     display: flex;
     flex-direction: column;
-    max-width: 25rem;
+    max-width: 400px;
     border-radius: 4%;
     overflow: auto;
 }
@@ -81,8 +76,15 @@ a {
     gap: 1.5rem;
 }
 
+.text_content p{
+    font-size: 0.95rem;
+    color: var(--desaturate-blue);
+    line-height: 2rem;
+}
+
 .text_content{
     display: flex;
+    padding: 0 0.5rem;
     justify-content: space-between;
     flex-direction: column;
     gap: 1rem;
@@ -98,7 +100,11 @@ a {
 }
 
 .price_container{
-    padding: 6%;
+    padding: 7%;
+}
+
+.price_info{
+    gap: 0.5rem;
 }
 
 .price_change > a {
@@ -108,10 +114,11 @@ a {
 .price_box > p {
     font-size: 0.9rem;
     color: var(--desaturate-blue);
+    padding-top: 7%;
 }
 
 .price_icon > img{
-    max-width: 75%;
+    max-width: 85%;
 }
 
 button{
@@ -125,10 +132,48 @@ button{
     box-shadow: 0px 20px 7px 0px var(--primary-color-pale-blue);
     padding: 5%;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover{
+    background-color: var(--dark-blue);
 }
 
 .cancel_order{
     color: var(--desaturate-blue);
+}
+
+/*Responsive mobile*/
+
+@media  screen and (max-width: 600px){
+    
+    body {
+        background-image: url('../../images/pattern-background-mobile.svg');
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    .container{
+        max-width: 310px;
+    }
+
+    .content{
+        padding: 10% 7%;
+    }
+
+    .text_content > p{
+        font-size: 0.95rem;
+    }
+
+    button{
+        font-size: 0.9rem;
+    }
+
+    .cancel_order{
+        font-size: 1rem;
+    }
 }
 /*
 @media screen and (min-width: 1000px) and (max-width: 1439px) { 
