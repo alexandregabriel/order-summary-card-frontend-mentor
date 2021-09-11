@@ -55,7 +55,7 @@ a {
     display: flex;
     flex-direction: column;
     max-width: 400px;
-    border-radius: 4%;
+    border-radius: 1.5rem;
     overflow: auto;
 }
 
